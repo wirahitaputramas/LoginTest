@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2b1 (Python 3.7.1 on win32)" generated="20200607 16:05:56.311" rpa="false">
+<suite id="s1" name="Login" source="D:\WIRAHITA\AMARTHA\WORKSPACE\Line\TestCase\Login.robot">
+<test id="s1-t1" name="Verify the item display on the login screen.">
+<kw name="Open the application" library="CommonKeyword">
+<doc>setup the variabel for open the app</doc>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${APPIUM_SERVER}</arg>
+<arg>platformName=${ANDROID_PLAT_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLAT_VER}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=Appium</arg>
+<arg>appPackage=${PACKET_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20200607 16:05:57.245" endtime="20200607 16:06:33.272"></status>
+</kw>
+<status status="PASS" starttime="20200607 16:05:57.244" endtime="20200607 16:06:33.273"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20200607 16:07:03.276" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20200607 16:06:33.274" endtime="20200607 16:07:03.276"></status>
+</kw>
+<kw name="Open the login screen" library="SplashScreen">
+<doc>tap on login button</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Login_Button}</arg>
+</arguments>
+<msg timestamp="20200607 16:07:03.281" level="INFO">Clicking element 'id=jp.naver.line.android.registration:id/login'.</msg>
+<status status="PASS" starttime="20200607 16:07:03.278" endtime="20200607 16:07:04.509"></status>
+</kw>
+<status status="PASS" starttime="20200607 16:07:03.277" endtime="20200607 16:07:04.510"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20200607 16:07:19.513" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20200607 16:07:04.512" endtime="20200607 16:07:19.513"></status>
+</kw>
+<kw name="The item on Login screen display correctly" library="LoginScreen">
+<doc>verify all items display on login screen</doc>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Login_Phone_Button}</arg>
+</arguments>
+<msg timestamp="20200607 16:07:19.586" level="INFO">Current page contains element 'id=jp.naver.line.android.registration:id/auth_with_phone_number'.</msg>
+<status status="PASS" starttime="20200607 16:07:19.514" endtime="20200607 16:07:19.586"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Continue_Facebook_Button}</arg>
+</arguments>
+<msg timestamp="20200607 16:07:19.611" level="INFO">Current page contains element 'id=jp.naver.line.android.registration:id/auth_with_facebook'.</msg>
+<status status="PASS" starttime="20200607 16:07:19.587" endtime="20200607 16:07:19.611"></status>
+</kw>
+<status status="PASS" starttime="20200607 16:07:19.514" endtime="20200607 16:07:19.612"></status>
+</kw>
+<doc>check the item displays on login screen.</doc>
+<tags>
+<tag>login</tag>
+</tags>
+<status status="PASS" starttime="20200607 16:05:57.242" endtime="20200607 16:07:19.613" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200607 16:05:56.315" endtime="20200607 16:07:19.642"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
